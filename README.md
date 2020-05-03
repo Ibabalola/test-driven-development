@@ -16,6 +16,8 @@ TDD is one of the most hotly discussed subjects in the software development worl
 
 * `node -v // v10.15.1`
 * `npm -v // 6.6.1`
+* `Mocha JS`
+* `Chai`
 
 ## Test-Driven Development
 
