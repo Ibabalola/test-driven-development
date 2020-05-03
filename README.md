@@ -59,3 +59,15 @@ Writing tests for your production code _before_ you actually write the productio
 * Unit Tests                -   Test very specific, low-level pieces of functionality
 * Integration Tests         -   Ensure that the individual pieces of your application work together correctly
 * End-to-End (E2E) Tests    -  Ensure your entire application works as seen from the viewpoint of a user
+
+### The Purpose of Unit Testing
+
+- Unit tests cover the smallest pieces of functionality: functions.
+- Our test should cover a representative range of inputs.
+- If you can break your production code without breaking your tests, they're not thorough enough.
+
+### TDD needs 3 basic tools
+
+1. A testing environment/test runner
+2. A testing framework
+3. An asserting library
