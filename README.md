@@ -11,3 +11,51 @@ TDD is one of the most hotly discussed subjects in the software development worl
 * JavaScript libraries for integration testing
 * Improving your TDD workflow
 * Checking the test coverage of the codebase
+
+## Software Installation
+
+* `node -v // v10.15.1`
+* `npm -v // 6.6.1`
+
+## Test-Driven Development
+
+Writing tests for your production code _before_ you actually write the production code
+
+1. The goal of test-driven development is code quality.
+2. There are good and bad tests.
+3. There are many different opinions about the right way to do TDD
+
+### Advantages of TDD
+
+1. TDD forces us to clarify our thinking.
+2. TDD improves communication between developers.
+3. TDD prevents code rot, a slow deterioration of software quality over time.
+4. TDD improves the structure of our production code, to create loosely coupled modular code.
+5. Allows developers to make 'worry-free' changes.
+
+### Disadvantages of TDD
+
+1. TDD takes longer at first.
+2. TDD isn't always a favourite with management.
+3. Beware of writing bad tests!
+
+## The basic TDD cycle
+
+1. [RED]        Write a failing test.
+2. [GREEN]      Write production code to make the test pass.
+3. [REFACTOR]   Refactor the code you wrote.
+
+## Writing Good Test
+
+### Criteria for a Good Test
+
+* **R**eadable
+* **I**solated
+* **T**horough
+* **E**xplicit
+
+### 3 different types of tests
+
+* Unit Tests                -   Test very specific, low-level pieces of functionality
+* Integration Tests         -   Ensure that the individual pieces of your application work together correctly
+* End-to-End (E2E) Tests    -  Ensure your entire application works as seen from the viewpoint of a user
