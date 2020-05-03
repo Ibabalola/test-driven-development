@@ -1,0 +1,30 @@
+{
+  "name": "test-driven-development",
+  "version": "1.0.0",
+  "description": "TDD is one of the most hotly discussed subjects in the software development world. Even the most carefully constructed applications grow to the point where debugging and ensuring quality becomes difficult. Test-driven development (TDD) helps with this tremendously by ensuring that all parts of your application are covered by tests. In this course, Shaun Wassell explores the foundational techniques and tools for unit and integration tests. Along the way, he zooms out to examine how they all fit together. Shaun also highlights TDD's strengths and weaknesses and provides real-world examples that showcase how TDD can fit into your development workflow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibabalola/test-driven-development.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ibabalola/test-driven-development/issues"
+  },
+  "homepage": "https://github.com/Ibabalola/test-driven-development#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

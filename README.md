@@ -16,8 +16,8 @@ TDD is one of the most hotly discussed subjects in the software development worl
 
 * `node -v // v10.15.1`
 * `npm -v // 6.6.1`
-* `Mocha JS`
-* `Chai`
+* `Mocha JS // test runner and testing framework`
+* `Chai // assertion library`
 
 ## Test-Driven Development
 
@@ -73,3 +73,6 @@ Writing tests for your production code _before_ you actually write the productio
 1. A testing environment/test runner
 2. A testing framework
 3. An asserting library
+
+#### Next Steps
+ Learning Functional Programming with JavaScript
