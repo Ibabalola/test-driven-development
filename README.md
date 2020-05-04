@@ -16,6 +16,7 @@ TDD is one of the most hotly discussed subjects in the software development worl
 
 * `node -v // v10.15.1`
 * `npm -v // 6.6.1`
+* `npm install`
 * `Mocha JS // test runner and testing framework`
 * `Chai // assertion library`
 
@@ -89,6 +90,9 @@ Pure functions equals loosely coupled code.
 2. Boudary Integration Tests
     - Test the communcation between different pieces of your application.
     - Don't use test double for boundary tests.
+
+### REST API
+- GET -> '/users/abc' -> returns { id, username, email } "Status Code OK 200" && Content-type: JSON Header 
 
 #### Next Steps
  Learning Functional Programming with JavaScript
