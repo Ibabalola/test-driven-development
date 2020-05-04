@@ -67,12 +67,28 @@ Writing tests for your production code _before_ you actually write the productio
 - Unit tests cover the smallest pieces of functionality: functions.
 - Our test should cover a representative range of inputs.
 - If you can break your production code without breaking your tests, they're not thorough enough.
+- Units tests are you used to test the outcomes of pure functions, functions without states or side effects.
 
 ### TDD needs 3 basic tools
 
 1. A testing environment/test runner
 2. A testing framework
 3. An asserting library
+
+### Integration Testing
+
+"Mocks" and "stubs" are the most common test doubles.
+"Don't mock what you don't own."
+Pure functions equals loosely coupled code.
+
+### Categories of Integration test
+
+1. Single-Service Integration Test
+    - Test a single piece, or "service" o fyour application end to end, independent of the other pieces.
+    - Suspectible to Outside Change
+2. Boudary Integration Tests
+    - Test the communcation between different pieces of your application.
+    - Don't use test double for boundary tests.
 
 #### Next Steps
  Learning Functional Programming with JavaScript
