@@ -85,7 +85,7 @@ Pure functions equals loosely coupled code.
 ### Categories of Integration test
 
 1. Single-Service Integration Test
-    - Test a single piece, or "service" o fyour application end to end, independent of the other pieces.
+    - Test a single piece, or "service" for your application end to end, independent of the other pieces.
     - Suspectible to Outside Change
 2. Boudary Integration Tests
     - Test the communcation between different pieces of your application.
