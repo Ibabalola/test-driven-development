@@ -20,3 +20,7 @@ export const getUserByUsername = async userName => {
 
     return result;
 }
+
+export default {
+    getUserByUsername
+}
