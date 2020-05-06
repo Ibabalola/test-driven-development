@@ -38,4 +38,36 @@ describe('GET /users/:username', () => {
         // run any other tests
         stub.restore();
     });
+
+    it('sends the correct response when there is an error', async () => {
+        const fakeError = { message: 'Something went wrong!' };
+        const stub = sinon.stub(db, 'getUserByUsername')
+            .throws(fakeError);
+        
+        // add the await keyword to the request method
+        // because it is an asynchronous method
+        await request(app).get('/users/abc')
+            .expect(500)
+            .expect('Content-Type', /json/)
+            .expect(fakeError);
+        
+        stub.restore();
+    });
+
+    it('returns the appropriate response when the user is not found', async () => {
+        const fakeData = null;
+
+        const stub = sinon
+            .stub(db, 'getUserByUsername')
+            .resolves(fakeData);
+
+        await request(app).get('/users/notauser')
+            .expect(404)
+            .expect('Content-Type', /json/)
+            .expect(fakeData);
+
+        expect(stub.getCall(0).args[0]).to.equal('notauser');
+        
+        stub.restore();
+    });
 })

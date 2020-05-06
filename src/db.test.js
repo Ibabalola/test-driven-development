@@ -34,4 +34,13 @@ describe('getUserbyUsername', () => {
         expect(actual).excludingEvery('_id').to.deep.equal(expected);
         expect(finalDBState).excludingEvery('_id').to.deep.equal(fakeData);
     });
+
+    it('should return null when the user is not found', async () => {
+        const actual = await getUserByUsername('non');
+        const finalDBState = await getDatabaseData('users');
+        const expected = null;
+
+        expect(actual).to.equal(expected);
+        expect(finalDBState).excludingEvery('_id').to.deep.equal(fakeData);
+    });
 });
