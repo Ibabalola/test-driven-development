@@ -16,24 +16,25 @@ import _ from 'lodash';
 import { getLetterCount } from './letter-count';
 
 export const isAnagram = (firstString, secondString) => {
-    if (!firstString || !secondString)
-        return false;
 
-    const firstWord = firstString.trim();
-    const secondWord = secondString.trim();
-
-    if (hasSpecialChar(firstWord) || hasSpecialChar(secondWord)) {
+    if (isEmptyCheck(firstString, secondString)) {
         return false;
     }
 
-    return _.isEqual(getLetterCount(firstWord.toLowerCase()), getLetterCount(secondWord.toLowerCase()));
+    const toLowerCaseFirstString = firstString.toLowerCase();
+    const toLowerCaseSecondString = secondString.toLowerCase();
+
+    if (hasSpecialChar(toLowerCaseFirstString) || hasSpecialChar(toLowerCaseSecondString)) {
+        return false;
+    }
+
+    return _.isEqual(getLetterCount(toLowerCaseFirstString), getLetterCount(toLowerCaseSecondString));
 }
 
-const hasSpecialChar = (string) => {
-    // any character that is not a word character or whitespace
-    const regex = /[^\w\s]/g;
-
-    return string[string.search(regex)] !== undefined;
+export const hasSpecialChar = (word) => {
+    const reEx = /[^\w\s]/g;
+    return word[word.search(reEx)] !== undefined;
 }
 
+export const isEmptyCheck = (firstString, secondString) => !firstString || !secondString;
 
